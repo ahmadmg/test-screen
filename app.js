@@ -35,7 +35,8 @@ function endFullScreen(){
     document.documentElement.requestFullscreen();
   }
   floatBtn.style.visibility="hidden";
-  container.style.visibility="visible"
+  container.style.visibility="visible";
+  mainDiv.style.backgroundColor = "";
 }
 
 

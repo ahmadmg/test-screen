@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
    margin:0;
    padding: 0;
+   font-family: 'Roboto', sans-serif;
+   color: beige;
 }
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
+	flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
     height: 100vh;
-		/* background image by Go to Adrien Olichon 
-	downloded from https://unsplash.com/photos/MYlCex1M7Ok */
-
-	background: url("./img/bg.jpg")no-repeat center center fixed; 
+	/* background by Markus Spiske https://unsplash.com/photos/Huyq5rbM_Po */
+	background: url("./img/bg.jpg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -20,23 +22,25 @@ body{
 }
 .center-flex{
     display: flex;
-    justify-content: center;
-    align-items: center;  
+	flex-direction: column;
+    justify-content:space-around;
+    align-items:center  
 }
 
 .container{
-	
-    background:#d9d9d9;
-	z-index: 0;
-	filter: blur(1px);
-	width: 300px;
-	height: 300px;
+	margin: 3em auto auto 3em;
+	width: 310px;
+	height: 260px;
+	border-radius: 3px;
+	backdrop-filter: blur(15px)
 }
 #full-screen{
-	z-index: 10;
-
+	width: 80%;
+	padding: 8px;
+	color: #000;
 }
 .float{
+	
 	position:fixed;
 	visibility: hidden;
 	width:60px;
@@ -50,3 +54,6 @@ body{
 	box-shadow: 2px 2px 3px #999;
 }
 
+.footer{
+	margin-left: 20%;
+}
