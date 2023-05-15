@@ -3,8 +3,10 @@ const fullScreen=document.getElementById("full-screen")
 const mainDiv=document.getElementById("main-div")
 const container=document.getElementById("container")
 const floatBtn=document.getElementById("Float-btn")
+import colors from "./assest.js"
 
 fullScreen.addEventListener("click",(e)=>openFullscreen(e))
+
 floatBtn.addEventListener("click",endFullScreen)
 
 function openFullscreen() {
@@ -15,9 +17,12 @@ function openFullscreen() {
       } else if (mainDiv.msRequestFullscreen) { /* IE11 */
         mainDiv.msRequestFullscreen();
     }
-    floatBtn.style.visibility="visible";
+   
     container.style.visibility="hidden"
-    mainDiv.style.backgroundColor="blue";
+    
+    changeBackgroundColor();
+    floatBtn.style.visibility="visible";
+    mainDiv.style.backgroundColor = "#f0f0f0";
   }
 
 function endFullScreen(){
@@ -31,4 +36,15 @@ function endFullScreen(){
   }
   floatBtn.style.visibility="hidden";
   container.style.visibility="visible"
+}
+
+
+
+function changeBackgroundColor() {
+  let index = 0;
+  colors.map((color, index) => {
+    setTimeout(() => {
+      mainDiv.style.backgroundColor = color;
+    }, index * 2500); // Change color every 1 second (adjust the interval as needed)
+  });
 }
