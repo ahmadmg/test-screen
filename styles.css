@@ -34,12 +34,12 @@ body
 	display: none;
 }
 #datetime{
-	width: 90%;
+	width: 100%;
 	text-align: end;
 	align-self:self-end;
 	padding: 1em;
-	margin: 1em;
-	border-radius: 15px;
+	margin: 0;
+
 	background-color: #283E5166;
 	
 }
@@ -78,7 +78,7 @@ main{
 
 .footer{
 align-self: center;
-	height: 2em;	
+height: 1.3em;	
 }
 a:after{
 	text-decoration: none;
