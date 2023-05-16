@@ -30,23 +30,32 @@ body
     justify-content:space-around;
     align-items:center  
 }
+#test-div{
+	display: none;
+}
 #datetime{
-	align-self: self-end;
+	width: 90%;
+	text-align: end;
+	align-self:self-end;
 	padding: 1em;
 	margin: 1em;
-	backdrop-filter: blur(15px);
+	border-radius: 15px;
+	background-color: #283E5166;
+	
 }
 main{
 	align-self: center;
+	
 }
 .container{
-	padding: 4px;
-	width: 300px;
+	width: calc(5em * 5);
+	padding: 1em;
 	height: 260px;
-	border-radius: 3px;
+	border-radius: 9px;
 	background-color: #283E5166;
 	backdrop-filter: blur(15px);
 }
+
 #full-screen{
 	
 	width: 80%;

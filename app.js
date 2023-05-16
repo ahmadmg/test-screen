@@ -1,10 +1,10 @@
 // Set a name for each DOM item 
 const fullScreen=document.getElementById("full-screen")
-const mainDiv=document.getElementById("main-div")
+const mainDiv=document.getElementById("test-div")
 const container=document.getElementById("container")
 const floatBtn=document.getElementById("Float-btn")
  
-let colorInterval;
+
 
 import colors from "./assest.js"
 // updating the time on the page
@@ -17,6 +17,8 @@ floatBtn.addEventListener("click",endFullScreen)
 
 // F to start the test 
 function openFullscreen() {
+  mainDiv.style.display="block"
+  
     if (mainDiv.requestFullscreen) {
         mainDiv.requestFullscreen();
        } else if (mainDiv.webkitRequestFullscreen) { /* Safari */
@@ -27,6 +29,7 @@ function openFullscreen() {
     container.style.visibility="hidden"
     changeBackgroundColor();
     floatBtn.style.display="block";
+    // floatBtn.style.zIndex="9999"
     mainDiv.style.backgroundColor = "transparent";
   }
 
@@ -56,9 +59,10 @@ function changeBackgroundColor() {
   colors.map((color, index) => {
     setTimeout(() => {
       mainDiv.style.backgroundColor = color;
-    }, index * 2500); // Change color every 1 second (adjust the interval as needed)
+    }, index * 2500); // Change color every 2.5 second
   });
 }
+
 function updateTime() {
   let now = new Date();
   let date = now.toLocaleDateString();
