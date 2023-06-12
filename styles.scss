@@ -1,27 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: beige;
 }
-
-html {
-  height: 100vh;
-}
-
 body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background: #4B79A1; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #283E51, #4B79A1); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #4B79A1;
+
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #283E51, #4B79A1);
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #283E51, #4B79A1);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .center-flex {
@@ -41,7 +43,7 @@ body {
   align-self: self-end;
   padding: 1em;
   margin: 0;
-  background-color: rgba(40, 62, 81, 0.4);
+  background-color: #283E5166;
 }
 
 main {
@@ -54,7 +56,7 @@ main {
   padding: 1em;
   height: 260px;
   border-radius: 9px;
-  background-color: rgba(40, 62, 81, 0.4);
+  background-color: #283E5166;
   backdrop-filter: blur(15px);
 }
 
@@ -83,12 +85,10 @@ main {
   height: 1.3em;
 }
 
-a:after {
-  text-decoration: none;
-}
-
 a {
+  &:after {
+    text-decoration: none;
+  }
+
   text-decoration: none;
 }
-
-/*# sourceMappingURL=styles.css.map */
